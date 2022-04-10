@@ -16,6 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="電話號碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHx-i6-3P3">
+                                <rect key="frame" x="20" y="84" width="215" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFJ-iX-6sd">
                                 <rect key="frame" x="251" y="87" width="120" height="31"/>
                                 <constraints>
@@ -28,23 +33,41 @@
                                     <action selector="getCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HUA-KW-aVa"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="電話號碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHx-i6-3P3">
-                                <rect key="frame" x="20" y="84" width="215" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="驗證碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emu-GG-JLB">
+                                <rect key="frame" x="20" y="136" width="215" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLQ-00-Imp">
+                                <rect key="frame" x="251" y="136" width="120" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="9bv-KT-n5h"/>
+                                    <constraint firstAttribute="height" constant="31" id="IKG-Tn-SmH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="登入"/>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zVg-yZ-CYj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="AHx-i6-3P3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3t7-5c-AOd"/>
+                            <constraint firstItem="emu-GG-JLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5zw-91-CpR"/>
+                            <constraint firstItem="JLQ-00-Imp" firstAttribute="top" secondItem="fFJ-iX-6sd" secondAttribute="bottom" constant="18" id="8Ta-vl-sgM"/>
+                            <constraint firstItem="JLQ-00-Imp" firstAttribute="leading" secondItem="emu-GG-JLB" secondAttribute="trailing" constant="16" id="BGq-wz-glA"/>
+                            <constraint firstItem="emu-GG-JLB" firstAttribute="top" secondItem="AHx-i6-3P3" secondAttribute="bottom" constant="18" id="Zjv-k0-brL"/>
                             <constraint firstItem="AHx-i6-3P3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="p7T-yr-bI8"/>
                             <constraint firstItem="fFJ-iX-6sd" firstAttribute="leading" secondItem="AHx-i6-3P3" secondAttribute="trailing" constant="16" id="sdp-9a-3Nm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JLQ-00-Imp" secondAttribute="trailing" constant="43" id="wku-TO-WX0"/>
                             <constraint firstItem="fFJ-iX-6sd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="yTi-Bx-aGn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFJ-iX-6sd" secondAttribute="trailing" constant="43" id="z7u-c0-S5x"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="codeTF" destination="emu-GG-JLB" id="Mfc-tz-Epu"/>
                         <outlet property="phoneTF" destination="AHx-i6-3P3" id="3JV-4e-0dt"/>
                     </connections>
                 </viewController>
