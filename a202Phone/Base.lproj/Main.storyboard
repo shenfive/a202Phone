@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,16 +13,16 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="a202Phone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="電話號碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHx-i6-3P3">
-                                <rect key="frame" x="20" y="84" width="215" height="34"/>
+                                <rect key="frame" x="20" y="40" width="176" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFJ-iX-6sd">
-                                <rect key="frame" x="251" y="87" width="120" height="31"/>
+                                <rect key="frame" x="212" y="43" width="120" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="9dC-Dm-sC3"/>
                                     <constraint firstAttribute="width" constant="120" id="hyZ-nS-esC"/>
@@ -34,12 +34,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="驗證碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emu-GG-JLB">
-                                <rect key="frame" x="20" y="136" width="215" height="34"/>
+                                <rect key="frame" x="20" y="88" width="176" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLQ-00-Imp">
-                                <rect key="frame" x="251" y="136" width="120" height="31"/>
+                                <rect key="frame" x="212" y="92" width="120" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="9bv-KT-n5h"/>
                                     <constraint firstAttribute="height" constant="31" id="IKG-Tn-SmH"/>
@@ -50,6 +50,18 @@
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zVg-yZ-CYj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-OS-vIY">
+                                <rect key="frame" x="192" y="589" width="138" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="lQ2-LC-Ecd"/>
+                                    <constraint firstAttribute="width" constant="138" id="wRg-Dc-IG6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lNZ-oc-DMT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,8 +70,10 @@
                             <constraint firstItem="emu-GG-JLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5zw-91-CpR"/>
                             <constraint firstItem="JLQ-00-Imp" firstAttribute="top" secondItem="fFJ-iX-6sd" secondAttribute="bottom" constant="18" id="8Ta-vl-sgM"/>
                             <constraint firstItem="JLQ-00-Imp" firstAttribute="leading" secondItem="emu-GG-JLB" secondAttribute="trailing" constant="16" id="BGq-wz-glA"/>
-                            <constraint firstItem="emu-GG-JLB" firstAttribute="top" secondItem="AHx-i6-3P3" secondAttribute="bottom" constant="18" id="Zjv-k0-brL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nDq-OS-vIY" secondAttribute="bottom" constant="27" id="Bfh-Vm-0cc"/>
+                            <constraint firstItem="emu-GG-JLB" firstAttribute="top" secondItem="AHx-i6-3P3" secondAttribute="bottom" constant="14" id="Zjv-k0-brL"/>
                             <constraint firstItem="AHx-i6-3P3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="p7T-yr-bI8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nDq-OS-vIY" secondAttribute="trailing" constant="45" id="qtc-9F-Tjg"/>
                             <constraint firstItem="fFJ-iX-6sd" firstAttribute="leading" secondItem="AHx-i6-3P3" secondAttribute="trailing" constant="16" id="sdp-9a-3Nm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JLQ-00-Imp" secondAttribute="trailing" constant="43" id="wku-TO-WX0"/>
                             <constraint firstItem="fFJ-iX-6sd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="yTi-Bx-aGn"/>
@@ -68,7 +82,9 @@
                     </view>
                     <connections>
                         <outlet property="codeTF" destination="emu-GG-JLB" id="Mfc-tz-Epu"/>
+                        <outlet property="getCodeBtn" destination="fFJ-iX-6sd" id="im1-sJ-Dj3"/>
                         <outlet property="phoneTF" destination="AHx-i6-3P3" id="3JV-4e-0dt"/>
+                        <outlet property="signInBtn" destination="JLQ-00-Imp" id="IBS-wE-s9O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
